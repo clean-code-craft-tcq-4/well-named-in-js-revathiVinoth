@@ -4,27 +4,35 @@ import {
 } from "./colorCoderHelper.js";
 import { ColorPair } from "./colorPair.js";
 
-function testNumberToPair(pairNumber, expectedMajorColor, expectedMinorColor) {
-  let testPair = getColorFromPairNumber(pairNumber);
-  console.log(`[In]Pair Number: ${pairNumber},[Out] Colors:${testPair}`);
-  console.assert(testPair.majorColor == expectedMajorColor);
-  console.assert(testPair.minorColor == expectedMinorColor);
+function convertNumbertoColor(
+  colorPairNumber,
+  expectedMajorColor,
+  expectedMinorColor
+) {
+  let actualColorPair = getColorFromPairNumber(colorPairNumber);
+  console.log(
+    `[In]Pair Number: ${colorPairNumber},[Out] Colors:${actualColorPair}`
+  );
+  console.assert(actualColorPair.majorColor == expectedMajorColor);
+  console.assert(actualColorPair.minorColor == expectedMinorColor);
 }
 
-function testPairToNumber(majorColor, minorColor, expectedPairNumber) {
-  let testPair = new ColorPair();
-  testPair.majorColor = majorColor;
-  testPair.minorColor = minorColor;
-  let pairNumber = getPairNumberFromColor(testPair);
-  console.log(`[In]Colors: ${testPair}, [Out] PairNumber: ${pairNumber}`);
-  console.assert(pairNumber == expectedPairNumber);
+function convertColortoNumber(majorColor, minorColor, expectedPairNumber) {
+  let colorPair = new ColorPair();
+  colorPair.majorColor = majorColor;
+  colorPair.minorColor = minorColor;
+  let actualPairNumber = getPairNumberFromColor(colorPair);
+  console.log(
+    `[In]Colors: ${colorPair}, [Out] PairNumber: ${actualPairNumber}`
+  );
+  console.assert(actualPairNumber == expectedPairNumber);
 }
 
 function test() {
-  testNumberToPair(4, "WHITE", "BROWN");
-  testNumberToPair(5, "WHITE", "SLATE");
-  testNumberToPair(23, "VIOLET", "GREEN");
-  testPairToNumber("YELLOW", "GREEN", 18);
-  testPairToNumber("RED", "BLUE", 6);
+  convertNumbertoColor(4, "WHITE", "BROWN");
+  convertNumbertoColor(5, "WHITE", "SLATE");
+  convertNumbertoColor(23, "VIOLET", "GREEN");
+  convertColortoNumber("YELLOW", "GREEN", 18);
+  convertColortoNumber("RED", "BLUE", 6);
 }
 test();
