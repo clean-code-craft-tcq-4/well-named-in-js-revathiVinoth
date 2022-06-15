@@ -1,8 +1,8 @@
 import {
   getColorFromPairNumber,
   getPairNumberFromColor,
-} from "./colorCoderHelper";
-import { ColorPair } from "./colorPair";
+} from "./colorCoderHelper.js";
+import { ColorPair } from "./colorPair.js";
 
 function testNumberToPair(pairNumber, expectedMajorColor, expectedMinorColor) {
   let testPair = getColorFromPairNumber(pairNumber);

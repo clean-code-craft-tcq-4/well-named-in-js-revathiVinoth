@@ -1,6 +1,6 @@
-import { ColorPair, MajorColorNames, MinorColorNames } from "./colorPair";
+import { ColorPair, MajorColorNames, MinorColorNames } from "./colorPair.js";
 
-export function getColorFromPairNumber(pairNumber) {
+function getColorFromPairNumber(pairNumber) {
   let minorColorSize = MajorColorNames.length;
   let majorColorSize = MinorColorNames.length;
 
@@ -16,7 +16,7 @@ export function getColorFromPairNumber(pairNumber) {
   return colorPair;
 }
 
-export function getPairNumberFromColor(pair) {
+function getPairNumberFromColor(pair) {
   let majorColorIndex = -1;
   for (let i = 0; i < MajorColorNames.length; i++) {
     if (MajorColorNames[i] == pair.majorColor) {
