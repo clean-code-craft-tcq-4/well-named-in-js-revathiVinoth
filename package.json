@@ -1,6 +1,7 @@
 {
   "name": "well-named-in",
   "version": "1.0.0",
+  "type": "module",
   "description": "JS Assignment Repository",
   "main": "colorCoder.js",
   "scripts": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/clean-s-1/well-named-in-js/issues"
   },
-  "homepage": "https://github.com/clean-s-1/well-named-in-js#readme"
+  "homepage": "https://github.com/clean-s-1/well-named-in-js#readme",
+  "dependencies": {
+    "module": "^1.2.5"
+  }
 }
